@@ -445,13 +445,50 @@
     border-color: var(--secondary) !important;
   }
 
-  .navbar-brand img {
+/* Volga navbar brand (responsive) */
+.volga-brand {
+    gap: 12px;
+  }
+  
+  .volga-brand img {
     display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .volga-mark {
+    height: 42px;
+    width: auto;
+    flex: 0 0 auto;
+  }
+  
+  .volga-wordmark {
+    height: 34px;         /* desktop size */
+    width: auto;
+    flex: 0 1 auto;
+    transform: rotate(1deg);  /* keep your straightening */
+  }
+  
+  /* Mobile: shrink neatly */
+  @media (max-width: 576px) {
+    .volga-mark {
+      height: 34px;
+    }
+    .volga-wordmark {
+      height: 26px;
+    }
+  }
+  
+  /* Very small screens: allow wordmark to wrap/scale down */
+  @media (max-width: 380px) {
+    .volga-wordmark {
+      height: 22px;
+    }
   }
   
   .volga-text {
-    transform: rotate(1deg);
-    margin-bottom: 29px;
-    height: 60px;
-    margin-left: 13px;
+    margin-bottom: 20px;
+    margin-left: 10px;
   }
+
+
