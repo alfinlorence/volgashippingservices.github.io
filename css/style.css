@@ -445,6 +445,13 @@
     border-color: var(--secondary) !important;
   }
 
-
-  body { outline: 6px solid red !important; }
+  .navbar-brand img {
+    display: block;
+  }
   
+  .volga-text {
+    transform: rotate(1deg);
+    margin-bottom: 29px;
+    height: 60px;
+    margin-left: 13px;
+  }
