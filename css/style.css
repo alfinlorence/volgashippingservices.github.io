@@ -96,7 +96,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -168,7 +168,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -224,7 +224,7 @@
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -235,19 +235,19 @@
         max-width: 100% !important;
     }
 
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -259,19 +259,19 @@
         max-width: 100% !important;
     }
 
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -339,19 +339,19 @@
         max-width: 100% !important;
     }
 
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .contact-page .contact-form  {
+    .contact-page .contact-form {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -417,78 +417,124 @@
 
 /* ===== Override Bootstrap "primary" + template accents ===== */
 :root {
-    --primary: #0B1957;     /* your blue */
-    --secondary: #51CFED;   /* your accent */
-  }
-  
-  .text-primary { color: var(--primary) !important; }
-  .bg-primary { background-color: var(--primary) !important; }
-  .border-primary { border-color: var(--primary) !important; }
-  
-  .btn-primary {
+    --primary: #0B1957;
+    /* your blue */
+    --secondary: #51CFED;
+    /* your accent */
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.btn-primary {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
-  }
-  .btn-primary:hover,
-  .btn-primary:focus {
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
     filter: brightness(0.9);
-  }
-  
-  /* Optional: keep secondary consistent too */
-  .text-secondary { color: var(--secondary) !important; }
-  .bg-secondary { background-color: var(--secondary) !important; }
-  .border-secondary { border-color: var(--secondary) !important; }
-  .btn-secondary {
+}
+
+/* Optional: keep secondary consistent too */
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.border-secondary {
+    border-color: var(--secondary) !important;
+}
+
+.btn-secondary {
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
-  }
+}
 
-/* Volga navbar brand (responsive) */
+/* Wrapper */
 .volga-brand {
     gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
+  /* All images behave properly */
   .volga-brand img {
     display: block;
-    max-width: 100%;
     height: auto;
+    width: auto;
+    max-width: 100%;
   }
   
-  .volga-mark {
-    height: 42px;
-    width: auto;
+  /* Logo */
+  .volga-logo {
+    height: 60px;
     flex: 0 0 auto;
   }
   
-  .volga-wordmark {
-    height: 34px;         /* desktop size */
-    width: auto;
-    flex: 0 1 auto;
-    transform: rotate(1deg);  /* keep your straightening */
+  /* Text block */
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 0; /* remove fixed push */
   }
   
-  /* Mobile: shrink neatly */
+  /* Main title */
+  .volga-text {
+    height: 30px;
+    margin-left: 10px;
+    transform: rotate(0.8deg);
+    margin-top: 5px;
+  }
+  
+  /* Tagline */
+  .volga-sub-text {
+    height: 15px;
+    align-self: flex-end;
+    transform: rotate(1deg);
+  }
+  
+  /* ---------- Mobile responsiveness ---------- */
   @media (max-width: 576px) {
-    .volga-mark {
+    .volga-logo {
+      height: 40px;
+    }
+    .volga-text {
+      height: 22px;
+      margin-left: 8px;
+    }
+    .volga-sub-text {
+      height: 11px;
+    }
+  }
+  
+  /* Very small screens */
+  @media (max-width: 380px) {
+    .volga-logo {
       height: 34px;
     }
-    .volga-wordmark {
-      height: 26px;
+    .volga-text {
+      height: 19px;
+      margin-left: 6px;
+    }
+    .volga-sub-text {
+      height: 10px;
     }
   }
   
-  /* Very small screens: allow wordmark to wrap/scale down */
-  @media (max-width: 380px) {
-    .volga-wordmark {
-      height: 22px;
-    }
-  }
-  
-  .volga-text {
-    margin-bottom: 20px;
-    margin-left: 10px;
-  }
-
-
